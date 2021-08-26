@@ -7,11 +7,26 @@
 <body>
 
 	<h2>form control - input</h2>
-	<form method="post" action="register.jsp" enctype="multipart/form-data">
+	<!--
+		type = "file" 일 경우 필수 속성 2가지 설정
+		method = "post"로 지정
+		아래의 타입을 설정하지 않으면 파일의 내용이 전송되지 않는다.
+		enctype = "multipart/form-data"
+	-->
+	<form method="POST" action="register.jsp" enctype="multipart/form-data">
 		<fieldset>
 			<label for="picture">사진첨부 : </label>
 			<input type="file" id="picture" name="picture">
 		</fieldset>
+		<div>
+			<input type="text" readonly name = t1 value="read">
+		</div>
+		<div>
+			<input type="text" disabled name = t2 value="disabled">
+		</div>
+		<div>
+			<input type="submit" value="send">
+		</div>
 	</form>
 	
 </body>
