@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #168;
+        }
+        div:nth-child(1){
+            width: 800px;
+            background-color: aqua;
+        }
+        div:nth-child(2){
+            background: rgb(120, 0, 50);
+            width: 600px;
+            height: 400px;
+            float: left;
+        }
+        div:nth-child(3){
+            width: 200px;
+            float: left;
+            background: rgb(120, 80, 50);
+        }
+        div:nth-child(4){
+            background: rgb(160, 80, 170);
+            width: 1000px;
+            clear: left;
+        }
+        p{
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+        .p1{
+            float: left;
+        }
+        .d2 > div{
+
+        }
+        div>p{
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class = "p1">로고</p>
+        <p class = "p2">자유게시판</p>
+        <p class = "p3">음악</p>
+    </div>
+    <div class = "d2">2
+        <div>
+        qwww   <p>sadsad</p>
+        </div>
+    </div>
+    <div>3</div>
+    <div>4</div>
+</body>
+</html>

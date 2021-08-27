@@ -1,0 +1,16 @@
+	//변수 선언.
+	var dan = 7;
+	var result = 0;
+	
+	console.log('** ' + dan + '단 ** ');
+	//for문을 이용하여 9번 반복.
+	for(var i=1;i<10;i++) {
+		//곱셈 연산의 결과를 저장.
+		result = dan * i;
+		
+		//콘솔창에 출력
+		//console.log(dan + ' * ' + i + ' = ' + result);
+		console.log(`${dan} * ${i} = ${result}`);
+
+		
+	}

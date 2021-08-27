@@ -1,0 +1,60 @@
+0<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function valCheck(){
+            if(document.getElementById("username").value==""){
+                alert("이름 입력!!!");
+                return;
+            }else{
+                alert("서버로 데이터 전송!!");
+                document.getElementById("f").submit();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>간단한 입력양식.</h3>
+    <img src="../img/login.png"/>
+    <form id="f" method="" action="http://www.naver.com">
+    이름 <input type="text" name="name" id="username" placeholder="이름을 입력하세요"><br>
+    아이디 <input type="text" name="id" id="useid"> <br>
+    비밀번호<input type="password" name="password" id="usepassword"> <br>
+    성별 <input type="radio" name="gender" id="man" checked="checked" value="남자">남
+    <input type="radio" name="gender" id="girl" value="여자">여<br>
+    취미
+    <label for="movie"><input type="checkbox" name="hobby" id="movie" value="영화"> 영화감상</label>
+    <input type="checkbox" name="hobby" id="" value="음악"> 음악감상
+    <input type="checkbox" name="hobby" id="" value="게임"> 게임
+    <input type="checkbox" name="hobby" id="" value="공부"> 공부 <br>
+    전화번호
+    <select name="tel1" id="">
+        <option value="010">핸드폰</option>
+        <option value="02">서울</option>
+        <option value="041">충남</option>
+    </select>
+    <input type="tel" name="tel2" id="">
+    <input type="tel" name="tel3" id=""><br/>
+    이메일 <input type="email" name="email" id=""><br/>
+    홈페이지 <input type="url" name="homepage" id=""><br/>
+    <input type="button" value="일반버튼" onclick="valCheck();"/>
+    <input type="reset" value="리셋"/>
+    <input type="submit" value="제출"/>
+    </form>
+
+    <form action="https://search.naver.com/search.naver">
+        검색이 <input type="text" name="query" id="">
+        <input type="image" src="../img/logo.png" alt="">
+        <button>버튼태크</button>
+    </form>
+
+</body>
+</html>
+
