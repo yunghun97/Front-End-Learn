@@ -12,9 +12,18 @@
       student.info = function () {
         console.log(this.name + '는 ' + this.area + this.classNum + '반');
       };
+      var teacher = {
+        name:"홍길동",
+        area:"충남",
+        classNum: 13,
+        info: function () {
+          console.log(this.name + '은 ' + this.area + this.classNum + '반');
+        },
+      };
       console.log(typeof student); // object
       console.log(student); // {name: "김싸피", area: "서울", classNum: 7, info: f}
       student.info(); // 김싸피는 서울7반
+      teacher.info();
     </script>
   </head>
   <body></body>

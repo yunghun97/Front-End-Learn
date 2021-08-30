@@ -3,18 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+    body{
+        background: blanchedalmond;
+    }
+    button{
+        border: 1px solid salmon;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    button:hover{
+        background-color: white;
+        color: black;
+    }
+    button:active{
+        background-color: red;
+    }
+</style>
 <script type="text/javascript">
-
+/*
 console.log(location);
 console.log(location.href);
 location.href = "http://www.naver.com";
 
 history.back();
 history.forward();
+*/
+function goPage(){
+    // alert("함수 호출 성공");      
+    if(confirm("페이지를 이동하시겠습니까?")){
+        location.href = "https://www.naver.com";
+    }
+}
+/*let goPage = function(){
+    
+    
+}*/
 
 </script>
 </head>
 <body>
-
+    <div>
+        <button onclick="goPage()">네이버 이동하기</button>
+    </div>
 </body>
 </html>
