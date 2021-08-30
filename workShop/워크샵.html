@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel ="stylesheet" href="워크샵CSS.css"/>
+</head>
+<body>
+<nav id = "topMenu">
+    <ul>
+        <li><a class="menuLink" href="">SSAFY BookCafe</a></li>
+        <li><a class="menuLink" href="">공지사항</a></li>
+        <li><a class="menuLink" href="">로그인</a></li>
+        <li><a class="menuLink" href="">회원가입</a></li>
+        <li><a class="menuLink" href="">로그아웃</a></li>
+        <li><a class="menuLink" href="">관리자</a></li>
+    </ul>
+</nav>
+    <div><img src=".\images\noimg.png" alt="불러오기 오류" id = "defaultImg"></div>
+    <img src=".\images\profile.png" alt="불러오기 오류" id = "profileImg">
+    <div>전국매장펼치기</div>
+    <div>전국매장접기</div>
+    <ul>
+        <li>서울
+            <ul>
+                <li>역삼점</li>
+                <li>선릉점</li>
+            </ul>
+        </li>
+        <li>대전
+            <ul>
+                <li>학하점</li>
+                <li>봉명점</li>
+            </ul>
+        </li>
+        <li>구미
+            <ul>
+                <li>인동점</li>
+                <li>공단점</li>
+            </ul>
+        </li>
+        <li>광주
+            <ul>
+                <li>하남신단점</li>
+                <li>광주역점</li>
+            </ul>
+        </li>
+    </ul>
+    <div>   <!--설문조사-->
+    <div>[당신의 선택]</div>
+    <div>공부하고 싶은 분야를 골라 주세요!!!</div>
+    <div>
+    <ul id = "언어선택">
+        <li>
+            <input type="radio" name="파이썬" id="PyhtonRadio">
+            <img src="./images/poll/python.png" alt="불러오기 오류"><span>Python</span>
+        </li>
+        <li>
+            <input type="radio" name="HTML5" id="HTML5Radio">
+            <img src="./images/poll/html5.png" alt="불러오기 오류"><span>HTML5</span>
+        </li>
+        <li>
+            <input type="radio" name="Vuejs" id="VuejsRadio">
+            <img src="./images/poll/vuejs.png" alt="불러오기 오류"><span>Vue.js</span>
+        </li>
+        <li>
+            <input type="radio" name="Java" id="JavaRadio">
+            <img src="./images/poll/java.png" alt="불러오기 오류"><span>Java</span>
+        </li>
+    </ul>
+    </div>
+    </div><!--설문조사 끝-->
+    <div><!--프로그래밍 선택-->
+    <section>
+    <h2 id="프로그래밍언어">[프로그래밍 언어]</h2>
+    <ul id = "책선택">
+        <li>
+            <img src="./images/book/p_book01.png" alt="불러오기오류">
+            <p>Do it 점프 투 파이썬 (18,800원)</p>
+        </li>
+        <li>
+            <img src="./images/book/p_book02.png" alt="불러오기오류">
+            <p>HTML5 API 프로그래밍 (28,000원)</p>
+        </li>
+        <li>
+            <img src="./images/book/p_book03.png" alt="불러오기오류">
+            <p>백문물여일타 Vue.js입문 (22,000원)</p>
+        </li>
+        <li>
+            <img src="./images/book/p_book04.png" alt="불러오기오류">
+            <p>Java 프로그래밍 (18,500원)</p>
+        </li>
+    </ul>
+    </section>
+    </div>  <!--프로그래밍 선택 끝-->
+
+    <div><!--에세이 선택-->
+    <section>
+    <h2>[에세이]</h2>
+    <ul id = "에세이선택">
+        <li>
+            <img src="./images/book/e_book01.png" alt="불러오기 오류">
+            <p>Z민족 (14,000)원</p>
+        </li>
+        <li>
+            <img src="./images/book/e_book02.png" alt="불러오기 오류">
+            <p>안녕 소중한 사랑 (15,000)원</p>
+        </li>
+        <li>
+            <img src="./images/book/e_book03.png" alt="불러오기 오류">
+            <p>꽃을 보면 너를 본다 (10,000)원</p>
+        </li>
+        <li>
+            <img src="./images/book/e_book04.png" alt="불러오기 오류">
+            <p>곰돌이 푸, 행복한 일은 매일 있어 (12,000)원</p>
+        </li>
+    </ul>
+    </section>
+    </div> <!--에세이 선택 끝-->
+    <h2>[인기글]</h3>
+    <table>
+        <tr>
+            <th>제목</th>
+            <th>작성자 조회수</th>
+        </tr>
+        <tr>
+            <th>자바공부 쉽게하기</th>
+            <th>이세림 1756</th>
+        </tr>
+        <tr>
+            <th>알고리즘 언어 선택</th>
+            <th>홍정잉 989</th>
+        </tr>
+        <tr>
+            <th>스프링 정복하기~</th>
+            <th>김나켠 856</th>
+        </tr>
+    </table>
+    <h2>[최신글]</h3>
+        <table>
+            <tr>
+                <th>제목</th>
+                <th>작성자 조회수</th>
+            </tr>
+            <tr>
+                <th>HTML질문</th>
+                <th>이준형 10</th>
+            </tr>
+            <tr>
+                <th>vuejs 팁</th>
+                <th>조밍기 990</th>
+            </tr>
+            <tr>
+                <th>꽃길만 걸어요</th>
+                <th>김세정 100</th>
+            </tr>
+        </table>
+    <ul>
+        <li><a href="">카페소개</a></li>
+        <li><a href="">개인정보처리방침</a></li>
+        <li><a href="">이용약관</a></li>
+        <li><a href="">오시는길</a></li>
+        <li>® SSAFY Corp.</li>
+    </ul>
+
+</body>
+</html>
