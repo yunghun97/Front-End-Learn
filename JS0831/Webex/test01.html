@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="addBtn1" onclick="addDiv;">추가</button>
+    <button id="addBtn2">추가</button>
+    <div id="list" name="n" class="a"></div>
+    <script>
+        let addBtn1 = document.getElementById('addBtn1');
+        let addBtn2 = document.getElementById("addBtn2");
+        // addBtn2.onclick = addDiv;
+        addBtn1.addEventListener('click',addDiv);
+        addBtn2.addEventListener('click',addDiv);
+        function addDiv(){
+            let list = document.getElementById("list");
+            let divEl = document.createElement("div");
+            divEl.innerHTML=`
+                <input type="text" />
+                <button>삭제</button>
+            `;
+            
+            /*
+            let inputEl = document.createElement('input');
+            inputEl.setAttribute('type', 'text');
+            divEl.appendChild(inputEl);
+            
+            let buttonEl = document.createElement('button');
+            let buttonText = document.createTextNode('delete');
+            buttonEl.appendChild(buttonText);
+            
+            divEl.appendChild(buttonEl);
+
+            let textNode = document.createTextNode("add"); //add
+            divEl.appendChild(textNode);
+            */
+            list.appendChild(divEl);
+        
+        }
+        
+        
+        /*function addDiv(){
+        let addBtn = document.getElementById("addBtn");
+        let list = document.getElementById("list");
+
+        let divEl = document.createElement("div");  //<div></div>
+        let textNode = document.createTextNode("add"); //add
+        divEl.appendChild(textNode);
+
+        list.appendChild(divEl);    //<div id="list"><div></div></div>
+        }
+        */
+    </script>
+
+</body>
+</html>
+
+<!--
+    엘리먼트 생성, 추가
+        doucument.createElement
+    엘리먼트 제거
+    속성 추가
+        엘리먼트.속성명 = 값
+        엘리먼트["속성명"] = 값  // 위에 2개는 사용자 정의 속성 브라우저에서 표시 X
+        엘리먼트.setAttribute("속성명", "값");
+        ex)
+        let inputEl =  document.createElement("input");
+        inputEl.type="text";
+        inputEl['type'] = "text";
+        inputEl.setAttribute('type','text');
+    속성 조회
+    엘리먼트 접근
+
+    이벤트 설정
+    인라인
+    함수이용
+
+-->

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <button>Click</button>
+    <div class="result">0</div>
+
+    <script>
+        let fnVal =100;
+        function fn(val){
+            if(val==undefined){
+                return fnVal;
+            }
+            console.log(val);
+        }
+        console.log(fn());
+        fn(100);
+        fn(100,200);
+        //버튼 클릭 시 0의 숫자를 1씩 증가시킨다.
+        $('button').click(function(){
+            $('.result').text(parseInt($('.result').text())+1);
+            
+            
+            // const result = $('.result');
+            // // html, text, attr, css
+            // result.text(parseInt(result.text())+1);
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        tr>td{
+            border: solid 1px black;
+            padding: 5px 5px;
+            text-align: center;
+            
+        }
+        tr:nth-child(n+2)>td{
+            background-color:antiquewhite;
+        }
+        #inputBox>input{
+            border: 0px;
+            text-align: right;
+        }
+        
+    </style>
+    <script src="/과제/Day4/calculator.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4" id ='inputBox'>
+                <input type="text" value="0" id='resultBox'>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" onclick="reset()">C</td>
+            <td onclick="addOper('/')">/</td>
+        </tr>
+        <tr>
+            <td onclick="add(7)">7</td>
+            <td onclick="add(8)">8</td>
+            <td onclick="add(9)">9</td>
+            <td onclick="addOper('*')">X</td>
+        </tr>
+        <tr>
+            <td onclick="add(4)">4</td>
+            <td onclick="add(5)">5</td>
+            <td onclick="add(6)">6</td>
+            <td onclick="addOper('-')">-</td>
+        </tr>
+        <tr>
+            <td onclick="add(1)">1</td>
+            <td onclick="add(2)">2</td>
+            <td onclick="add(3)">3</td>
+            <td onclick="addOper('+')">+</td>    
+        </tr>
+        <tr>
+            <td></td>
+            <td onclick="add(0)">0</td>
+            <td onclick="add('.')">.</td>
+            <td onclick="cal()">=</td>
+        </tr>
+        
+    </table>
+
+
+   
+</body>
+</html>

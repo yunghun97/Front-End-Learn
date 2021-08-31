@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click</button>
+    <script>
+        // 위에 버튼에 클릭 이벤트를  설정하요 버튼 클릭 시 콘솔창에 "성공"을 출력
+        // 단 vanilascript
+
+        /*const btn = document.querySelector('button');
+        btn.addEventListener('click', function(){
+            console.log('성공');
+        });*/
+        document.querySelector('button').addEventListener('click', () => console.log('성공'));
+    </script>
+</body>
+</html>

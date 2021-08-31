@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="msg">
+    <div id='result'></div>
+    <script>
+        // msg창에서 입력한 내용을 아이디가 result div에 출력
+
+        // 콜백함수에서 첫번째 매개변수를 이용해서 이벤트의 정보를 얻을 수 있다.
+        document.getElementById('msg').onkeyup = (e) => {
+            console.log(this);
+            console.log(e.target);
+            document.getElementById('result').innerText=e.target.value;
+        };
+        // document.getElementById('msg').onkeyup = (function(e){
+        //     console.log(this);
+        //     console.log(e.target);
+        // });
+    </script>
+</body>
+</html>
