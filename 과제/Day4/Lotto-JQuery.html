@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>로또 추첨번호 뽑기</h1>
+    <div>추첨번호 : 
+        <span id='num1'></span>
+        <span id='num2'></span>
+        <span id='num3'></span>
+        <span id='num4'></span>
+        <span id='num5'></span>
+        <span id='num6'></span>
+    </div>
+    <div>보너스번호 :
+        <span id='numBonus' value=''></span>
+    </div>
+    <input type="button" value="추첨번호 뽑기" id='drawNum'>
+    <script>
+        $('#drawNum').click(function(){
+            
+            let arr = drawNum();
+            let i;
+            for(i=0; i<7; i++){
+                $('span').eq(i).text(arr[i]);
+            }
+    
+        });
+        function drawNum(){
+            let arr = new Array(7);
+            let temp = new Array(7);
+            let i;
+            let j;
+            for(i=0; i<7; i++){
+                arr[i]=parseInt(Math.random()*45+1);
+            }
+            for(i=0; i<7; i++){
+                for(j=i+1; j<7; j++){
+                if(arr[i]===arr[j]){
+                    arr[j]=parseInt(Math.random()*45+1);
+                    i--;
+                }
+                }
+            }
+            return arr;
+        }
+    </script>
+</body>
+</html>
