@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script 
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		// TODO: textArea 태그에 키가 올라왔을 때 핸들러 등록
+		// 핸들러 내용은 textArea 안의 글자수를 계산하여 출력.
+		$("textarea").keyup(function() {
+			var inputSize = $(this).val().length, remain = 200 - inputSize;
+			$("h2").html(remain);
+		});
+	});
+	</script>
+</head>
+<body>
+	<div>
+		<p>메모장</p>
+		<h2>200</h2>
+		<textarea rows="6" cols="70"></textarea>
+	</div>
+</body>
+</html>
+

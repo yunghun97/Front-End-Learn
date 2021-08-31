@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("div > ul").css("background", "#cc66ff");
+			$("ul.site > li").css("border", "1px solid blue");
+		});
+	</script>
+</head>
+
+<body>
+	<h3>jQuery DOM Hierarchy Selector</h3>
+	<p>검색을 도와주는 사이트는 여러가지가 있습니다.</p>
+	<div>
+		<ul class="site">
+			<li>다음 : www.daum.net</li>
+			<li>네이트 : www.nate.com</li>
+			<li>
+				<ul>
+					<li>네이버블로그 : blog.naver.com</li>
+					<li>네이버카페 : cafe.naver.com</li>
+				</ul>
+			</li>
+			<li>CGV : www.cgv.co.kr</li>
+			<li>Megabox : www.megabox.co.kr</li>
+		</ul>
+		<div>
+			<p>
+				1.네이버 : www.naver.com<br>
+				2.네이버블로그 : blog.naver.com<br>
+				3.네이버카페 : cafe.naver.com<br>
+			</p>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var html = $("#div1").html();
+			var text = $("#div1").text();
+			alert(html);
+			alert(text);
+			$("#div1").append(html).append(text);
+		});
+	</script>
+</head>
+
+<body>
+	<div id="div1">
+		아이디 : <input type="text" placeholder="아이디입력.." /><br />
+		<span>사용자 설정.</span><br />
+	</div>
+</body>
+
+</html>

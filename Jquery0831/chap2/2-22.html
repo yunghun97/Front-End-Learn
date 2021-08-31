@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		var array = [
+			{ 	name: 'SSAFY',
+				link: 'http://www.ssafy.com' },
+			{ 	name: 'Naver',
+				link: 'http://www.naver.com' },
+			{ 	name: 'Google',
+				link: 'http://www.google.com' }
+			];
+		var outHtml = '';
+		// array 배열을 탐색하며 outHtml 생성
+		$.each(array, function (index, item) {
+			outHtml += '<a href="' + item.link + '">';
+			outHtml += ' <h2>' + item.name + '</h2>';
+			outHtml += '</a>';
+		});
+		document.body.innerHTML = outHtml;
+	});
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
+
+

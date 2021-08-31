@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('h2').one('click', function () {
+          $(this).html(function (index, html) {
+            return html + '*';
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h2>안녕하세요1.</h2>
+    <h2>안녕하세요2.</h2>
+    <h2>안녕하세요3.</h2>
+  </body>
+</html>

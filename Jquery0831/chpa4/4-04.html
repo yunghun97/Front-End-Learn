@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+      .reverse {
+        background: black;
+        color: white;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('h2').on({
+          click: function () {
+            $(this).html(function (index, html) {
+              return html + '*';
+            });
+          },
+          mouseenter: function () {
+            $(this).addClass('reverse');
+          },
+          mouseleave: function () {
+            $(this).removeClass('reverse');
+          },
+        });
+
+        $('#btn1').click(function () {
+          $('h2').off('click');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h2>안녕하세요1.</h2>
+    <h2>안녕하세요2.</h2>
+    <h2>안녕하세요3.</h2>
+    <button id="btn1">클릭제거</button>
+  </body>
+</html>

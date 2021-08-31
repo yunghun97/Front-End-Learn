@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#div1 > h2").on("click", function() {
+			var	origin = $(this).html();
+			$("<h2>" + origin + "</h2>").appendTo("#div1");
+		});
+		
+		$("#div2").on("click", "h2", function() {
+			var	origin = $(this).html();
+			$("<h2>" + origin + "</h2>").appendTo("#div2");
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="div1">
+		<h2>싸피 강좌</h2>
+	</div>
+	<div id="div2">
+		<h2>싸피 과목</h2>
+	</div>
+</body>
+</html>
+
+

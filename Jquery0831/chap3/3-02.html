@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+	.col1 { color : orange; }
+	.col2 { color : magenta; }
+	.col3 { color : steelblue; }
+	</style>	
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#col1").addClass("col1");
+		$("h3[name='col2']").addClass("col2");
+		$(".col3").removeClass(".col3");
+		$("h1").click(function() {
+			$(this).toggleClass("col3");
+		})
+	});
+	</script>
+</head>
+<body>
+	<h1>안녕하세요1.</h1>
+	<h2 id="col1">안녕하세요2.</h2>
+	<h3 name="col2">안녕하세요3.</h3>
+	<h4 class="col3">안녕하세요4.</h4>
+</body>
+</html>
+
+

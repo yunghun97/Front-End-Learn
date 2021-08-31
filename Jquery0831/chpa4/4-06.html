@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<style type="text/css">
+	.outer {
+		width: 200px; height: 200px; background: orange; 
+		padding: 50px; margin: 10px;
+	}
+	
+	.inner {
+		width: 100%; height: 100%; background: red;
+	}
+	</style>
+	<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript"> 
+	$(document).ready(function () { 
+		// TODO: 바깥 div 태그에 mouseover와 mouseenter 핸들러를 등록 한다. 
+		// 핸들러 에서는 이벤트가 발생한 마우스의 x,y 좌표를 출력한다. 
+		$(".outer").mouseover(function (event) { 
+			$("body").append("<h2>MOUSEOVER Xpos : " + event.pageX + ", Ypos : " + event.pageY + "</h2>"); 
+		}).mouseenter(function (event) { 
+			$("body").append("<h2>MOUSEENTER Xpos : " + event.pageX + ", Ypos : " + event.pageY + "</h2>"); 
+		}); 
+		// 이벤트 전파를 막을 경우 
+		/* $(".inner").mouseover(function(event) { event.stopPropagation(); }); */ 
+	}); 
+	</script>
+</head>
+<body>
+	<div class="outer">
+		<div class="inner"></div>
+	</div>
+</body>
+</html>

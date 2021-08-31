@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>jquery</title>
+    <style type="text/css">
+      div {
+        width: 500px;
+        height: 500px;
+        background-color: orange;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // TODO: textArea의 텍스트가 변경되면 내용을 divArea에 복사
+        $('#textArea').change(function () {
+          $('#divArea').text($(this).val());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h5>입력 :</h5>
+    <textarea id="textArea" rows="5" cols="68"></textarea>
+    <hr />
+    <div id="divArea"></div>
+  </body>
+</html>

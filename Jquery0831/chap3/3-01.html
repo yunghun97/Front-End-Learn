@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var srcValue = $('img').attr('src');
+        alert('src1 : ' + srcValue);
+
+        $('img').each(function (i, element) {
+          var value = $(this).attr('src');
+          alert('src2 : ' + value);
+        });
+
+        $('img').attr({ width: 100, height: 150 });
+        alert('width와 height를 200으로 설정!!');
+
+        $('img').removeAttr('height');
+        alert('height 속성 제거!!!');
+
+        $('img').attr('width', function (i) {
+          return (i + 1) * 100;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <img src="../img/ice_americano.jpg" width="200" />
+    <img src="../img/ice_cafelatte.jpg" width="200" />
+    <img src="../img/ice_cafemocha.jpg" width="200" />
+    <img src="../img/ice_vanillalatte.jpg" width="200" />
+  </body>
+</html>

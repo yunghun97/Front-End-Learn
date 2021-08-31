@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		// findArea 하위 요소 중 
+		// class가 myClass인 요소들의 배경색을 silver로 변경 
+		$("#findArea").find(".myClass") .css("background", "silver"); 
+	});
+	</script>
+</head>
+<body>
+	<div id="findArea"> 
+		<h1>첫번째</h1> 
+		<h2 class="myClass">두번째</h2> 
+		<h3 class="myClass">세번째</h3> 
+		<h4>네번째</h4> 
+		<div><h4 class="myClass">div태그안</h4></div>
+	</div>
+</body>
+</html>
+
+

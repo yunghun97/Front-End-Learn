@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("label + input").css("border", "2px solid steelblue");
+	});
+</script>
+</head>
+<body>
+	<h3>jQuery DOM Hierarchy Selector</h3>
+	<div>
+		<form>
+			<label>이름 : </label>
+			<input name="name"/>
+			<fieldset>
+				<label>나이</label>
+				<input name="age"/>
+			</fieldset>
+			아이디 : <input name="id"/>
+		</form>
+		<input name="none"/>
+	</div>
+</body>
+</html>
+

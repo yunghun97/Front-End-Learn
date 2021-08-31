@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<style type="text/css">
+		table {
+			width: 200px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// #1. 짝수 번째 행 배경색(#ff66ff)
+			$("#domTable tr:even").css("background", "#ff66ff");
+			// #2. 홀수 번째 행 배경색(#33ffff)
+			$("#domTable tr:odd").css("background", "#33ffff");
+			// #3. 첫 번째 행 배경색(black), 글자색(white)
+			$("#domTable tr:first").css("background", "black")
+				.css("color", "white");
+		});
+	</script>
+</head>
+
+<body>
+	<table id="domTable">
+		<thead>
+			<tr>
+				<th>제목</th>
+				<th>내용</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>A1</td>
+				<td>A2</td>
+			</tr>
+			<tr>
+				<td>B1</td>
+				<td>B2</td>
+			</tr>
+			<tr>
+				<td>C1</td>
+				<td>C2</td>
+			</tr>
+			<tr>
+				<td>D1</td>
+				<td>D2</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>

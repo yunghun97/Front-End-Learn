@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<style type="text/css">
+		.high-light-0 {
+			background: yellow;
+		}
+
+		.high-light-1 {
+			background: orange;
+		}
+
+		.high-light-2 {
+			background: blue;
+		}
+
+		.high-light-3 {
+			background: green;
+		}
+
+		.high-light-4 {
+			background: red;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// h2 태그마다 high-light-0~4 클래스로 CSS 적용
+			$("h2").each(function (index, item) {
+				// item 대신 this 사용 가능
+				$(item).addClass("high-light-" + index);
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<h2>첫번째</h2>
+	<h2>두번째</h2>
+	<h2>세번째</h2>
+	<h2>네번째</h2>
+	<h2>다섯번째</h2>
+</body>
+
+</html>

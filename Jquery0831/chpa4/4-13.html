@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>jquery</title>
+  <style type="text/css" media="all">
+    #fisheye {
+      margin-top: 200px;
+    }
+
+    .fisheye {
+      text-align: center;
+      height: 200px;
+      position: relative;
+    }
+
+    a.fisheyeItem {
+      text-align: center;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      width: 40px;
+      position: absolute;
+      display: block;
+      top: 0;
+    }
+
+    .fisheyeItem img {
+      border: none;
+      margin: 0 auto 5px auto;
+      width: 100%;
+    }
+
+    .fisheyeItem span {
+      display: none;
+      positon: absolute;
+    }
+
+    .fisheyeContainter {
+      height: 200px;
+      width: 700px;
+      position: absolute;
+    }
+  </style>
+  <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+  <script type="text/javascript" src="interface.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#fisheye').Fisheye({
+        maxWidth: 80,
+        items: 'a',
+        itemsText: 'span',
+        container: '.fisheyeContainter',
+        itemWidth: 80,
+        proximity: 90,
+        halign: 'center',
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="fisheye" class="fisheye">
+    <div class="fisheyeContainter">
+      <a href="#" class="fisheyeItem"><img src="../img/icon1.jpg" width="80" /><span>Home</span></a>
+      <a href="#" class="fisheyeItem"><img src="../img/icon2.jpg" width="80" /><span>Feed</span></a>
+      <a href="#" class="fisheyeItem"><img src="../img/icon3.jpg" width="80" /><span>Email</span></a>
+      <a href="#" class="fisheyeItem"><img src="../img/icon4.jpg" width="80" /><span>Graph</span></a>
+      <a href="#" class="fisheyeItem"><img src="../img/icon5.jpg" width="80" /><span>Display</span></a>
+      <a href="#" class="fisheyeItem"><img src="../img/icon6.jpg" width="80" /><span>Print</span></a>
+      <a href="#" class="fisheyeItem"><img src="../img/icon7.jpg" width="80" /><span>Sound</span></a>
+      <a href="#" class="fisheyeItem"><img src="../img/icon8.jpg" width="80" /><span>Comment</span></a>
+    </div>
+  </div>
+</body>
+
+</html>

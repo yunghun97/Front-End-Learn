@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>jquery</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    dl {
+      width: 400px;
+      margin: 50px auto;
+    }
+
+    dl dt {
+      background: #ccccff;
+      border-bottom: 1px solid #ffffff;
+      cursor: pointer;
+    }
+
+    dl dd {
+      border: 1px solid #ccccff;
+      border-top: none;
+      height: 300px;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('dd:not(:first)').css('display', 'none');
+      $('dl dt').click(function () {
+        if ($('+dd', this).css('display') == 'none') {
+          $(this).siblings('dd').slideUp('slow');
+          $('+dd', this).slideDown('slow');
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="container">
+    <dl>
+      <dt>텍스트1</dt>
+      <dd>
+        <p>
+          텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트
+          텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트
+        </p>
+      </dd>
+      <dt>텍스트 2</dt>
+      <dd>
+        <p>
+          텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트
+          텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트
+        </p>
+      </dd>
+      <dt>텍스트 3</dt>
+      <dd>
+        <p>
+          텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트
+          텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트
+        </p>
+      </dd>
+    </dl>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM 탐색</title>
+<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<span id="div1">id가 div1인 span 영역</span>
+	<div>div 영역</div>
+	<span name="div3">name이 div3인 span 영역</span>
+	<span class="div4">class가 div4인 span 영역</span>
+	<script type="text/javascript">
+	var element1 = $("#div1");
+	var element2 = $("div").eq(0);
+	var element3 = $("[name=div3]").eq(0);
+	var element4 = $(".div4").eq(0);
+	
+	console.log(element1.html());
+	console.log(element2.html());
+	console.log(element3.html());
+	console.log(element4.html());
+	</script>
+</body>
+</html>

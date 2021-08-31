@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		// 필터 Selector 적용이 어려운 경우
+		// 3n번째 h2 엘리먼트에 CSS 색상 적용
+		$("h2").filter(function (index) {
+			return index % 3 == 0;
+		}).css({
+			background: "black",
+			color: "white"
+		});
+	});
+	</script>
+</head>
+<body>
+	<h2>첫번째</h2>
+	<h2>두번째</h2>
+	<h2>세번째</h2>
+	<h2>네번째</h2>
+	<h2>다섯번째</h2>
+	<h2>여섯번째</h2>
+</body>
+</html>
+
+

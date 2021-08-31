@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<style type="text/css">
+		div,
+		span {
+			width: 100px;
+			height: 80px;
+			float: left;
+			padding: 10px;
+			margin: 10px;
+			background: #d8d8d8;
+		}
+
+		div#small {
+			width: 60px;
+			height: 20px;
+			font-size: 12px;
+			background: #00ff33;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#prev ~ div").css("color", "magenta").css("font-weight", "bold");
+		});
+	</script>
+</head>
+
+<body>
+	<h3>jQuery DOM Hierarchy Selector</h3>
+	<p id="center">#prev ~ div</p>
+	<div>div 1</div>
+	<span id="prev">span1 #prev</span>
+	<div>div 2</div>
+	<div>
+		div 3 <div id="small">div3 #small</div>
+	</div>
+	<span>span 2</span>
+	<div>div 4</div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // TODO : All 체크박스를 체크/해제 하면
+        // 다른 모든 체크박스도 체크/해제
+        $('#allCheck').change(function () {
+          if ($(this).is(':checked')) {
+            $('#checkItem').children().prop('checked', true);
+          } else {
+            $('#checkItem').children().prop('checked', false);
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="checkbox" id="allCheck" />
+    <label><b>All</b></label>
+    <hr />
+    <div id="checkItem">
+      <input type="checkbox" /><label>옵션1</label><br />
+      <input type="checkbox" /><label>옵션2</label><br />
+      <input type="checkbox" /><label>옵션3</label><br />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("button").click(function() {
+			$(".div1").toggle("slow", function() {
+				alert("완료!!");
+			});
+		});
+	});
+	</script>
+</head>
+<body>
+	<button>토글 보여주기</button>
+	<div class="div1">
+		<h2>토글 효과</h2>
+		<p>토글 함수를 이용하여 간단한 jQuery효과를 볼 수 있습니다.</p>
+	</div>
+</body>
+</html>
+
+

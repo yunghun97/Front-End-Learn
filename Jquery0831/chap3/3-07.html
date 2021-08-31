@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#btn1").click(function() {
+			$("#h2").remove();
+		});
+		$("#btn2").click(function() {
+			$("div").empty();
+		});
+	});
+	</script>
+</head>
+<body>
+	<div>
+		<h2 id="h1">안녕하세요1</h2>
+		<h2 id="h2">안녕하세요2</h2>
+		<h2 id="h3">안녕하세요3</h2>
+	</div>
+	<input type="button" id="btn1" value="두번째 h2 삭제"/>
+	<input type="button" id="btn2" value="div 비움"/>
+</body>
+</html>
+
+

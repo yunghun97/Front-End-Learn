@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		var student = {
+			"no"	: "2012987",
+			"name"	: "김싸피",
+			"phone"	: "010-1234-9876",
+			"email"	: "kimssafy@ssafy.com"
+		};
+		var newStudent = '<tr>';
+		newStudent += '<td>' + student.no + '</td>';
+		newStudent += '<td>' + student.name + '</td>';
+		newStudent += '<td>' + student.phone + '</td>';
+		newStudent += '<td>' + student.email + '</td>';
+		newStudent += '</tr>';
+		
+		$("tbody").append(newStudent);
+	});
+	</script>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>학번</th>
+				<th>이름</th>
+				<th>전화번호</th>
+				<th>이메일</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>2012985</td>
+			<td>홍싸피</td>
+			<td>010-5577-9988</td>
+			<td>hong@naver.com</td>
+		</tr>
+		<tr>
+			<td>2012986</td>
+			<td>박싸피</td>
+			<td>010-9977-5432</td>
+			<td>hong@naver.com</td>
+		</tr>
+		</tbody>
+	</table>
+</body>
+</html>
+
+

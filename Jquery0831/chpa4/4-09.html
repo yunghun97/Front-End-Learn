@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery</title>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#myForm").submit(function(event) {
+			var name = $("#name").val(), password = $("#password").val();
+			alert(name + " : " + password);
+			event.preventDefault();
+		});
+	});
+	</script>
+<body>
+	<form id="myForm">
+		<table>
+			<tr>
+				<td>이름:</td>
+				<td><input type="text" name="name" id="name" /></td>
+			</tr>
+			<tr>
+				<td>비밀번호:</td>
+				<td><input type="password" name="password" id="password" /></td>
+			</tr>
+		</table>
+		<input type="submit" value="제출" />
+	</form>
+</body>
+</html>
+
+

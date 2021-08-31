@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+		.col1 {
+			color: orange;
+		}
+
+		.col2 {
+			color: magenta;
+		}
+
+		.col3 {
+			color: steelblue;
+		}
+
+		.col4 {
+			color: green;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var color = $("h2").css("color");
+			alert(color);
+
+			$("h2").css("color", "blue");
+
+			var colors = ["silver", "lime"];
+			$("h2").css("color", function (index) {
+				return colors[index % 2];
+			});
+
+			$("h2").css({
+				color: function (index) {
+					return colors[index % 2];
+				},
+				background: "black"
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<h2 class="col1">안녕하세요1.</h2>
+	<h2 class="col2">안녕하세요2.</h2>
+	<h2 class="col3">안녕하세요3.</h2>
+	<h2 class="col4">안녕하세요4.</h2>
+</body>
+
+</html>

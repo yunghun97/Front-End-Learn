@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		// 체크박스 중 name이 checkedFalse이고 
+		// 체크되어 있으면 체크를 해제함 
+		$("input[type='checkBox']").each(function () { 
+			if ($(this).is("[name='checkedFalse']") && $(this).is(":checked")) { 
+				$(this).attr("checked", false); 
+			} 
+		});
+	});
+	</script>
+</head>
+<body>
+	<h3><input type="checkBox" name="checkedFalse" checked="checked"/>체크박스1</h3> 
+	<h3><input type="checkBox" checked="checked"/>체크박스2</h3> 
+	<h3><input type="checkBox" checked="checked"/>체크박스3</h3>
+</body>
+</html>
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		var html = "<h2>안녕하세요1.</h2>";
+		html += "<h2>안녕하세요2.<h2>";
+		
+		$("div.divHtml").html(html);
+		$("div.divText").text(html);
+	});
+	</script>
+</head>
+<body>
+	<div class="divHtml"></div>
+	<div class="divText"></div>
+</body>
+</html>
+
+

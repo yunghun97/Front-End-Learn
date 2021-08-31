@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+	div {background: #ccffff; padding: 10px; margin: 10px;}
+	</style>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("div > a[href!='http://www.naver.com']").css("background", "#00cc33");
+	});
+	</script>
+</head>
+<body>
+	<h3>jQuery Attribute Selector</h3>
+	<p>검색을 도와주는 사이트는 여러가지가 있습니다.</p>
+	<div>
+		<p>href의 속성값이 <br>http://www.naver.com이 아닌 요소의<br> 배경색을 지정합니다.</p>
+		<a href="http://www.google.com">Goooooogle</a><br>
+		<a href="http://www.naver.com" target="_blank">Naver</a><br>
+		<a href="http://www.daum.net">Daum</a><br>
+		<a href="http://www.nate.com" target="_blank">Nate</a>
+	</div>
+</body>
+</html>
+
+

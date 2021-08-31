@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM 탐색</title>
+</head>
+<body>
+	<span id="div1">id가 div1인 span 영역</span>
+	<div>div 영역</div>
+	<span name="div3">name이 div3인 span 영역</span>
+	<span class="div4">class가 div4인 span 영역</span>
+	<script type="text/javascript">
+	var element1 = document.getElementById("div1");
+	var element2 = document.getElementsByTagName("div")[0];
+	var element3 = document.getElementsByName("div3")[0];
+	var element4 = document.getElementsByClassName("div4")[0];
+	
+	console.log(element1.innerHTML);
+	console.log(element2.innerHTML);
+	console.log(element3.innerHTML);
+	console.log(element4.innerHTML);
+	</script>
+</body>
+</html>

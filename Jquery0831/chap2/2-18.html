@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+	div {background: #ccffff; padding: 10px; margin: 10px;}
+	</style>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("input[name~='man']").css("background", "#cc66ff");
+	});
+	</script>
+</head>
+<body>
+	<h3>jQuery Attribute Selector</h3>
+	<p>man.</p>
+	<div>
+		<p>name에 공백을 구분자로 단어가 man인<br> 요소의 배경색을 지정합니다.</p>
+		<input name="superman" value="name is superman"><br>
+		<input name="iron man" value="name is iron man"><br>
+		<input name="hobbit" value="name is hobbit"><br>
+		<input name="cat woman" value="name is cat woman"><br>
+		<input name="batman" value="name is batman"><br>
+	</div>
+</body>
+</html>
+
+

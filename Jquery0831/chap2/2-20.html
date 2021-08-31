@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('tr:eq(0)').css('background', 'black').css('color', 'white');
+        $('td:nth-child(3n)').css('background', 'red');
+        $('td:nth-child(3n+1)').css('background', 'blue');
+        $('td:nth-child(3n+2)').css('background', 'green');
+      });
+    </script>
+  </head>
+  <body>
+    <h2>jQuery필터 셀렉터</h2>
+    <p>jQuery필터 셀렉터의 종류를 나열하였습니다.</p>
+    <div>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th>표현식</th>
+          <th>설명</th>
+        </tr>
+        <tr>
+          <td>button 필터</td>
+          <td>:button</td>
+          <td>모든 버튼 선택</td>
+        </tr>
+        <tr>
+          <td>checkbox 필터</td>
+          <td>:checkbox</td>
+          <td>체크박스 엘리먼트 선택</td>
+        </tr>
+        <tr>
+          <td>체크상태 필터</td>
+          <td>:checked</td>
+          <td>선택된 체크박스</td>
+        </tr>
+        <tr>
+          <td>비활성화 필터</td>
+          <td>:disabled</td>
+          <td>비활성화 엘리먼트 선택</td>
+        </tr>
+        <tr>
+          <td>활성화 필터</td>
+          <td>:enabled</td>
+          <td>활성화 엘리먼트 선택</td>
+        </tr>
+        <tr>
+          <td>파일 필터</td>
+          <td>:file</td>
+          <td>파일 엘리먼트 선택</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
