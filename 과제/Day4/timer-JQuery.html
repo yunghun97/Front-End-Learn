@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .time{
+            font-weight: bold;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>타이머</h1>
+    <div>타이머를 동작시킬 시간을 입력해주세요</div>
+    <div>
+        <input type="text" id="hourText"><span>시</span>
+        <input type="text" id="minuteText"><span>분</span>
+        <input type="text" id="secondText"><span>초</span>
+        <input type="button" value="시작" id='start'><br>
+        <span id='hourSpan' class="time">00</span><span>:</span>
+        <span id='minuteSpan' class="time">00</span><span>:</span>
+        <span id='secondSpan' class="time">00</span>
+    </div>
+
+    <script>
+        $('#start').click(function(){
+        var timer;
+        var hour = $('#hourSpan');
+        var setHour = $('#hourText');
+        var minute = $('#minuteSpan');
+        var setMinute = $('#minuteText');
+        var second = $('#secondSpan');
+        var setSecond = $('#secondText');
+        hour.text(setHour.val());
+        minute.text(setMinute.val());
+        second.text(setSecond.val());
+        var counter = (hour.text()*3600)+(minute.text()*60)+(second.text()*1);
+        var temp;
+            timer = setInterval(function(){
+            counter--;
+            hour.text(parseInt(counter/3600));
+            temp = counter - (parseInt(counter/3600) * 3600);
+            minute.text(parseInt(temp/60));
+            temp = temp - (parseInt(temp/60)*60);
+            second.text(temp);
+            console.log(counter);
+            if(counter<=0){
+                alert("타이머 종료");
+                clearInterval(timer);
+            }
+        },1000);
+        }
+        )
+        
+        
+        
+    </script>
+</body>
+</html>
