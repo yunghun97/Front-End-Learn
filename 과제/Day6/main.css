@@ -1,0 +1,31 @@
+h2{
+    padding: 100px 15px 10px 100px;
+}
+.table{
+    position: static;
+    padding: 0px 0px 0px 100px;
+}
+tr>td>input{
+    align-items: center;
+    width: 70%;
+    color: gray;
+}
+.writeTable tr>td:nth-child(1){
+    background-color:bisque;
+}
+#작성완료{
+    position: relative;
+    left: 300px;
+    background-color: cadetblue;
+}
+.viewTable tr>td:nth-child(2){
+    background-color:azure;
+    color: black;
+    text-align: center;
+}
+.pages{
+    padding-left: 50%;
+}
+button{
+    background-color:darkgreen ;
+}
