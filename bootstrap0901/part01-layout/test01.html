@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <style>
+      div {
+        min-height: 100px;
+        font-size: 1.5rem;
+        color: white;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+      div:nth-child(5n + 1) {
+        background-color: #882e2e;
+      }
+      div:nth-child(5n + 2) {
+        background-color: #3dd8d0;
+      }
+      div:nth-child(5n + 3) {
+        background-color: #f88f0f;
+      }
+      div:nth-child(5n + 4) {
+        background-color: #1d887a;
+      }
+      div:nth-child(5n + 5) {
+        background-color: #8b33f0;
+      }
+    </style>
+    <title>GRID</title>
+  </head>
+  <body>
+    <!--
+      $container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1320px
+      );
+      max-width가 중단점 전까지 100%가 되다가 중담점에서 변경
+     -->
+    <div class="container">container</div>
+    <div class="container-sm">container-sm : 576 < 100% 넓이를 가진다.</div>
+    <div class="container-md">container-md : 768 < 100% 넓이를 가진다.</div>
+    <div class="container-lg">container-lg : 992 < 100% 넓이를 가진다.</div>
+    <div class="container-xl">container-xl : 1200 < 100% 넓이를 가진다.</div>
+    <div class="container-xxl">container-xxl : 1400 < 100% 넓이를 가진다.</div>
+    <div class="container-fluid">container-fluid</div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
