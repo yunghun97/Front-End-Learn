@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="btn1">속성확인</button>
+        <button id="btn2">속성추가</button>
+    </div>
+    <img src="./night.png" width="400" height="300" alt="시원한~" id="img1">
+    <div id="result"></div>
+    <script>
+        // 두개의 버튼에 클릭 이벤트 설정
+        document.getElementById('btn1').onclick = function(){
+            document.getElementById('result').innerText=document.getElementById('img1').alt;
+            // document.getElementById('result').innerText=document.getElementById('img1').getAttribute('alt');
+            // document.getElementById('result').innerText=document.getElementById('img1')['alt'];
+
+            // document.getElementById('result').innerText = document.getElementById('img1').dataset.asdsad
+        };
+        document.getElementById('btn2').addEventListener('click',function(){
+            document.getElementById('img1')['src']='./lion.png';
+            // document.getElementById('img1').setAttribute('dataTitle','test title');
+            // html5부터 사용자 정의 속성에 대한 표준 : data-사용자정의속성
+            document.getElementById('img1').setAttribute('data-Title','test title');
+            
+            // document.getElementById('img1').dataset.asdsad = 'test title';
+        });
+
+    </script>
+</body>
+</html>

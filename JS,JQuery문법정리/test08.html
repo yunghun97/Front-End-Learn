@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result{
+            width: 300px;
+            height: 300px;
+            font-size: 30px;
+            margin: 10px;
+            text-align: center;
+            line-height: 300px;
+        }
+        .dy{
+            background: #345;
+            color: #fff;
+            border: 10px solid tomato;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h2>class를 이용한 스타일 적용</h2>
+    <div><button id='btn1'>class 적용</button></div>
+    <div id="result" class="ab">
+        TEST CSS
+    </div>
+    <script>
+        document.querySelector('button').onclick = function(){
+            // document.getElementById('result').className = 'dy';
+            // document.getElementById('result')['className'] = 'dy';
+            
+            // document.getElementById('result').setAttribute('class','dy');
+            // setAttribute는 class라고 써도 적용이 됨 
+            
+            // document.getElementById('result').classList.add('dy');
+            // document.getElementById('result').classList.remove('dy');
+            document.getElementById('result').classList.toggle('dy');
+        }
+    </script>
+</body>
+</html>

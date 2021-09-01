@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <button id="btn1">속성확인</button>
+        <button id="btn2">속성추가</button>
+    </div>
+    <img src="./night.png" width="400" height="300" alt="시원한~" id="img1">
+    <div id="result"></div>
+    <script>
+        // 두개의 버튼에 클릭 이벤트 설정
+        $('#btn1').on('click', function(){
+            $('#result').text($('#img1').attr('alt'));
+            // attr('속성명')
+            // $("#result").text($('#img1').attr('alt')+","+$('#img1').attr('data-msg'));
+            $("#result").text($('#img1').attr('alt')+","+$('#img1').data('msg'));
+        }); 
+        $('#btn2').on('click', function(){
+            // $('#img1').attr('src', './lion.png');
+            // $('#img1').attr('data-msg', '라이언 사진');
+
+            // 체이닝 -> set 작업은 설정 후 return 값으로 자기 자신을 돌려준다.
+            // $('#img1').attr('src', './lion.png').attr('data-msg', '라이언 사진');
+
+            //자바의 맵 형태와 비슷하게 객체로 만들어서 넘겨준다 키값 : value 값
+            // {'src': 'lion.png', 'data-msg': '라이언 사진'}
+            $('#img1').attr({'src': 'lion.png', 'data-msg': '라이언 사진'});
+        }); 
+
+    </script>
+</body>
+</html>

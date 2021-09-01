@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        button{
+            width: 120px;
+            height: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border: 1px solid aqua;
+        }
+        button:active{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button data-name="btn1">prepend</button>
+        <button data-name="btn2">append</button>
+        <button data-name="btn3">before</button>
+        <button data-name="btn4">after</button>
+    </div>
+    <!--before-->
+    <div id="list">
+        <!--prepend-->
+        DIV - LIST
+        <!--append-->
+    </div>
+    <!--after-->
+    <script>
+        let cnt =1;
+        $('button').click(function(e){
+            // alert($(e.target).attr('data-name'));
+            // alert($(e.target).data('name'));
+            switch($(e.target).data('name')){
+                case 'btn1': $('#list').prepend(`<h2>prepend${cnt++}</h2>`); break;
+                case 'btn2': $('#list').append(`<h2>append${cnt++}</h2>`); break;
+                case 'btn3': $('#list').before(`<h2>before${cnt++}</h2>`); break;
+                case 'btn4': $('#list').after(`<h2>after${cnt++}</h2>`); break;
+
+                // insertBefore, insertAfter, prependTo, appendTo 는 기능은 똑같지만 대상이 바뀜
+                //case 'btn1': $(`<h2>prepend${cnt++}</h2>`).prependTo('#list'); break;
+                
+            }
+        })
+    </script>
+</body>
+
+</html>

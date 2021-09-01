@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <button id='btn'>확인</button>
+    <div>
+        <div>
+            <input type="checkbox" id="menu1" name="menu" value="콜라">
+            <label for="menu1">콜라</label>
+        </div>
+        <div>
+            <input type="checkbox" id="menu2" name="menu" value="피자">
+            <label for="menu2">피자</label>
+        </div>
+        <div>
+            <input type="checkbox" id="menu3" name="menu" value="떡볶이">
+            <label for="menu3">떡볶이</label>
+        </div>
+    </div>
+    <div id="result"></div>
+    
+    <script>
+        $('#btn').on('click', ()=>{
+            let ckArr= [];
+            const menuList = $('[name="menu"]:checked').each((index, item)=>{       // JS와 달리 반대로 index item 순이다.
+                ckArr.push(item.value);
+            });
+            if(ckArr.length!=0){
+            $('#result').text(`${ckArr.length}개 ${ckArr.join()}`);
+            }
+        }); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <button id="btn1">추가</button>
+    <button id="btn2">확인</button>
+    <div id="result"></div>
+    <script>
+        $('#btn1').click(function(){
+            $('#result').append('<h2>aaa</h2>');
+
+        });
+        $('#btn2').click(function(){
+            console.log($('#result').text());
+            console.log($('#result').html());
+        });
+
+    </script>
+</body>
+</html>

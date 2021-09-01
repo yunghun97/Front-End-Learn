@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result{
+            width: 300px;
+            height: 300px;
+            font-size: 30px;
+            margin: 10px;
+            text-align: center;
+            line-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <button id="btn1">배경색 변경(#345)</button>
+    <button id="btn2">글자색 변경(#fff)</button>
+    <button id="btn3">테두리 추가하기(10px solid tomato)</button>
+    <button id="btn4">테두리 둥글게(50%)</button>
+    </div>
+    <div id="result">TEST CSS</div>
+    <script>
+        let resultDiv = document.getElementById('result');
+        document.getElementById('btn1').onclick = function(){
+            resultDiv.style.background = '#345';
+        };
+        document.getElementById('btn2').onclick = function(){
+            resultDiv.style.color = '#fff';
+        };
+        document.getElementById('btn3').onclick = function(){
+            resultDiv.style.border = '10px solid tomato';
+        };
+        document.getElementById('btn4').onclick = function(){
+            // resultDiv.style.borderRadius = '50%';
+            resultDiv.style['border-radius'] = '50%';
+        };
+        // resultDiv.setAttribute('style', 'background: #345; color: #fff; border: 10px solid tomato; border-radius: 50%');
+    </script>
+</body>
+</html>

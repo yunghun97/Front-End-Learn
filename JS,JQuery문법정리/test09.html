@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id='btn'>확인</button>
+    <div>
+        <div>
+            <input type="checkbox" id="menu1" name="menu" value="콜라">
+            <label for="menu1">콜라</label>
+        </div>
+        <div>
+            <input type="checkbox" id="menu2" name="menu" value="피자">
+            <label for="menu2">피자</label>
+        </div>
+        <div>
+            <input type="checkbox" id="menu3" name="menu" value="떡볶이">
+            <label for="menu3">떡볶이</label>
+        </div>
+    </div>
+    <div id="result"></div>
+    
+    <script>
+        document.getElementById('btn').onclick = function(){
+            const menuList = document.getElementsByName('menu');
+            let ckArr = [];
+            
+            menuList.forEach(function(item, index){
+                if(item.checked){
+                    ckArr.push(item.value);
+                }
+            });        //forEach()가 내부적으로 menuList크기 만큼 반복, 첫번째 매개변수로 배열의 원소 1개씩 준다 -> 두 번째는 index준다 ex5 제공
+            document.getElementById('result').innerText = (ckArr.length + "개 (" + ckArr.join()+")");
+            
+            
+            /*for(let i=0; i<menuList.length; i++){
+                if(menuList[i].checked){
+                    ckArr.push(menuList[i].value)
+                }
+            }
+            // console.log(ckArr.length + "개 (" + ckArr.join()+")"); // join() =배열의 요소를 합쳐짐 default ',' 로 구분
+            document.getElementById('result').innerText = (ckArr.length + "개 (" + ckArr.join()+")");
+            */
+        }
+    </script>
+</body>
+</html>
