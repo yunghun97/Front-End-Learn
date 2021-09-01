@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <title>버튼 그룹</title>
+    <style>
+      h4 {
+        background: #000;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      h4:first-child ~ h4 {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h4>class="btn-group" : 버튼의 배경색</h4>
+      <div class="btn-group mb-3" role="group">
+        <button type="button" class="btn btn-primary">Left</button>
+        <button type="button" class="btn btn-primary">Middle</button>
+        <button type="button" class="btn btn-primary">Right</button>
+      </div>
+
+      <h4>Link 태그</h4>
+      <div class="btn-group">
+        <a href="#" class="btn btn-primary active" aria-current="page"
+          >Active link</a
+        >
+        <a href="#" class="btn btn-primary">Link</a>
+        <a href="#" class="btn btn-primary">Link</a>
+      </div>
+
+      <h4>class="btn-group" : radio 태그</h4>
+      <div class="btn-group" role="group">
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="btnradio1"
+          checked
+        />
+        <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" />
+        <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" />
+        <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+      </div>
+
+      <h4>class="btn-group" : radio 태그</h4>
+      <div class="btn-group-vertical" role="group">
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="btnradio1"
+          checked
+        />
+        <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" />
+        <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" />
+        <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

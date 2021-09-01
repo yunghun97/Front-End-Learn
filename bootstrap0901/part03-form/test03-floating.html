@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>플로팅 라벨</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      h1,
+      h4 {
+        background: #000;
+        color: #fff;
+        padding: 5px;
+      }
+      h4:first-child ~ h4 {
+        margin-top: 50px;
+      }
+      form > div:last-child {
+        margin-bottom: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      주의사항 
+      : input이 먼저 나와야 한다. js에서 ~ 선택자를 이용하여 처리하기 때문
+    -->
+    <div class="container">
+      <h4>플로팅 라벨 - input</h4>
+      <div class="form-floating mb-3">
+        <input
+          type="email"
+          class="form-control"
+          id="floatingInput"
+          placeholder="name@example.com"
+        />
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="password"
+          class="form-control"
+          id="floatingPassword"
+          placeholder="Password"
+        />
+        <label for="floatingPassword">Password</label>
+      </div>
+
+      <h4>플로팅 라벨 - textarea</h4>
+      <div class="form-floating">
+        <textarea
+          class="form-control"
+          placeholder="Leave a comment here"
+          id="floatingTextarea"
+          style="height: 100px"
+        ></textarea>
+        <label for="floatingTextarea">Comments</label>
+      </div>
+
+      <h4>플로팅 라벨 - 그리드안에서는 col 안에 넣는다.</h4>
+      <div class="row g-2">
+        <div class="col-md">
+          <div class="form-floating">
+            <input
+              type="email"
+              class="form-control"
+              id="floatingInputGrid"
+              placeholder="name@example.com"
+            />
+            <label>Email address</label>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <select
+              class="form-select"
+              id="floatingSelectGrid"
+              aria-label="Floating label select example"
+            >
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <label>Works with selects</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

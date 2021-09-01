@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <style>
+      @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+      header {
+        height: 100px;
+        background-color: #f76707;
+        color: #fff;
+        border-radius: 15px;
+        padding: 10px;
+        margin: 10px 0;
+        font-family: 'Nanum Gothic', sans-serif;
+        text-align: center;
+      }
+      footer {
+        font-family: 'Nanum Gothic', sans-serif;
+        text-align: center;
+      }
+      ul.menu {
+        background-color: rgba(201, 201, 201, 0.5);
+        padding: 10px;
+        border-radius: 10px;
+        list-style: none;
+      }
+    </style>
+    <title>GRID</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>부트스트랩을 이용한 레이아웃</h2>
+      </header>
+      <div class="row">
+        <div class="col-sm-2">
+          <ul class="menu">
+            <li>menu 1</li>
+            <li>menu 2</li>
+            <li>menu 3</li>
+            <li>menu 4</li>
+          </ul>
+        </div>
+        <div class="col-sm-8">
+          <div class="row">
+            <p class="col-sm-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+              sapiente quasi illum? Totam, incidunt nemo nesciunt nostrum sequi
+              delectus culpa dicta impedit, amet, blanditiis quo exercitationem?
+              Beatae, accusamus. Quod, error.
+            </p>
+            <p class="col-sm-8">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sed
+              dolore laborum hic, explicabo labore eligendi, voluptate culpa,
+              vel laboriosam excepturi fugit praesentium? Fugit fuga aliquam
+              tempora pariatur, quam consequuntur? Tenetur tempore voluptas,
+              blanditiis unde ut, odit ipsum distinctio cupiditate saepe
+              consectetur iusto tempora deserunt quia quidem velit eum aperiam
+              cum dolorum neque. Animi assumenda fuga harum! Facilis, expedita
+              reiciendis.
+            </p>
+          </div>
+        </div>
+        <aside class="col-sm-2">
+          <div>오늘 본 상품</div>
+          <ul class="menu">
+            <li>상품 1</li>
+            <li>상품 2</li>
+            <li>상품 3</li>
+            <li>상품 4</li>
+          </ul>
+        </aside>
+      </div>
+      <hr />
+      <footer>하단 정보</footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

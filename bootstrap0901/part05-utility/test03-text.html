@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <style>
+      .container {
+        font-size: 1.5rem;
+      }
+      h4 {
+        background: #000;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        clear: both;
+      }
+
+      h4:first-child ~ h4 {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h4>텍스트 wrap</h4>
+      <div class="bg-primary text-wrap" style="width: 6rem">
+        bg-primary text-wrap
+      </div>
+      <div class="bg-info text-nowrap" style="width: 6rem">
+        bg-info text-nowrap
+      </div>
+
+      <h4>굵기</h4>
+      <p class="fw-bold">fw-bold</p>
+      <p class="fw-bolder">fw-bolder(relative to the parent element).</p>
+      <p class="fw-normal">fw-normal</p>
+      <p class="fw-light">fw-light</p>
+      <p class="fw-lighter">fw-lighter(relative to the parent element).</p>
+
+      <h4>스타일</h4>
+      <p class="fst-italic">fst-italic</p>
+      <p class="fst-normal">fst-normal</p>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
