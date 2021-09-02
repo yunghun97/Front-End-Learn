@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSON</title>
+    <style type="text/css">
+      table {
+        width: 300px;
+        height: 100px;
+      }
+      th,
+      td {
+        text-align: center;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#listBtn').click(function () {
+          $.ajax({
+            url: '1-07json.jsp',
+            type: 'GET',
+            contentType: 'application/json;charset=utf-8',
+            dataType: 'json',
+            success: function (response) {
+              makeList(response);
+            },
+            error: function (xhr, status, msg) {
+              console.log('상태값 : ' + status + ' Http에러메시지 : ' + msg);
+            },
+          });
+        });
+
+        function makeList(data) {
+          //alert(data);
+          var studentlist = ``;
+          $.each(data, function (index, item) {
+            studentlist += `<tr>
+				<td>${item.id}</td>
+				<td>${item.name}</td>
+				<td>${item.class}</td>
+				<td>${item.grade}</td>
+				</tr>`;
+            $('#studentinfo').empty().append(studentlist);
+          });
+          $('tr:first').css('background', 'black').css('color', 'white');
+          $('tr:odd').css('background', 'lightgray');
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <h3>SSAFY 분반</h3>
+    <button id="listBtn">학생정보보기</button>
+    <table>
+      <tr>
+        <th>학번</th>
+        <th>이름</th>
+        <th>분반</th>
+        <th>성적</th>
+      </tr>
+      <tbody id="studentinfo"></tbody>
+    </table>
+  </body>
+</html>

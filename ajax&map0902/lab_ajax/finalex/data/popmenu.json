@@ -1,0 +1,26 @@
+[
+ {
+ 	"pid" : "i0001",
+ 	"pname" : "(i) 아메리카노",
+ 	"price" : "4500",
+ 	"picture" : "/ice/ice_americano.jpg"
+ },
+ {
+ 	"pid" : "i0002",
+ 	"pname" : "(i) 카페모카",
+ 	"price" : "5500",
+ 	"picture" : "/ice/ice_cafemocha.jpg"
+ },
+ {
+ 	"pid" : "i0003",
+ 	"pname" : "(i) 화이트초코모카",
+ 	"price" : "6000",
+ 	"picture" : "/ice/ice_whitechocolatemocha.jpg"
+ },
+ {
+ 	"pid" : "i0005",
+ 	"pname" : "(i) 카라멜마끼야또",
+ 	"price" : "6500",
+ 	"picture" : "/ice/ice_caramelmacchiato.jpg"
+ }
+]

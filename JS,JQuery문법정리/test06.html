@@ -22,7 +22,10 @@
             // resultDiv.innerHTML += '<h1>추가</h1>';
             let h1El = document.createElement('h1');
             h1El.append('추가');   //<h1>추가</h1>
+            let h2El = document.createElement('h2');
+            h2El.append('추가2');   //<h1>추가</h1>
             document.getElementById('result').append(h1El);
+            document.getElementById('result').prepend(h2El);
 
         });
         

@@ -1,0 +1,29 @@
+body{
+    background-color:lightsteelblue;
+}
+.loginMenu{
+    padding: 100px;
+}
+.loginMenu > .inLine{
+    display: block;
+}
+h2{
+    text-align: center;
+}
+.btn1{
+    height: 30px;
+    width: 150px;
+    background-color: skyblue;
+    border: 1px solid white;
+    border-radius: 10%;
+}
+.btn2{
+    height: 30px;
+    width: 150px;
+    background-color: lightcoral;
+    border: 1px solid white;
+    border-radius: 10%;
+}
+.buttones{
+    padding-left: 20%;
+}

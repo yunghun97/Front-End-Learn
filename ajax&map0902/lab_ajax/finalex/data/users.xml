@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<users>
+	<user id="ssafy">
+		<username>김싸피</username>
+		<passwd>1234</passwd>
+		<picture>william.png</picture>
+	</user>
+	<user id="java">
+		<username>박자바</username>
+		<passwd>9876</passwd>
+		<picture>bentley.png</picture>
+	</user>
+	<user id="lucky">
+		<username>최행운</username>
+		<passwd>7777</passwd>
+		<picture>crush.png</picture>
+	</user>
+</users>

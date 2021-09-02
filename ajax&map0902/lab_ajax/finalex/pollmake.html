@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>투표 생성</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/cafe.js"></script>
+</head>
+<body>
+	<div class="poll">
+		<h3 class="poll_title">투표 만들기</h3>
+		<div class="poll_content">
+		<form action="">
+			<div class="poll_question">
+				<label>질문 내용</label>
+				<input type="text" id="question" name="question" placeholder="질문내용...">
+			</div>
+			<div class="poll_answer">
+				<label>답변 항목</label>
+				<button type="button" id="addAnswerBtn" class="button">추가</button>
+			</div>
+			<div id="poll_answer_list">
+				<div class="poll_answer_item">
+					<input type="text" name="answer">
+				</div>
+			</div>
+			<div class="poll_make">
+				<button type="button" id="pollMakeBtn" class="button btn_primary">투표 생성</button>
+			</div>
+		</form>
+		</div>
+	</div>
+</body>
+</html>
