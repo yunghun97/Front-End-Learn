@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="./css/memo.css" />
+    <link rel="stylesheet" href="./css/lotto.css" />
+    <link rel="stylesheet" href="./css/food.css" />
+    <link rel="stylesheet" href="./css/music.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>예제 연습</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">MLec</a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-page="views/lotto.html" href="#1">로또</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-page="views/food.html" href="#1"
+              >오늘뭐먹지?</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-page="views/board.html" href="#1"
+              >게시판</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-page="views/memo.html" href="#1">웹메모</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-page="views/music.html" href="#1"
+              >음악듣기</a
+            >
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">로그인</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">회원가입</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="pageBody"></div>
+
+    <script src="./script/lotto.js"></script>
+    <script src="./script/food.js"></script>
+    <script src="./script/board.js"></script>
+    <script src="./script/memo.js"></script>
+    <script src="./script/music.js"></script>
+
+    <script>
+      $('.nav-link').click((e) => {
+        $nav = $(e.target);
+        $('#pageBody').load($nav.data('page'));
+        $('.nav-link').removeClass('active');
+        $nav.addClass('active');
+      });
+    </script>
+  </body>
+</html>

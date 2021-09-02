@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      https://getbootstrap.kr/docs/5.1/components/navbar/ 
+      참고해서 사이트 만들기 
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./lotto/lotto.css" />
+    <link rel="stylesheet" href="./food/food.css" />
+    <title>예제 연습</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">MLec</a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-page="lotto/lotto.html" href="#1">로또</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-page="food/food.html" href="#1"
+              >오늘뭐먹지?</a
+            >
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">로그인</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">회원가입</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="pageBody"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./lotto/lotto.js"></script>
+    <script src="./food/food.js"></script>
+
+    <script>
+      $('.nav-link').click((e) => {
+        $nav = $(e.target);
+        $('#pageBody').load($nav.data('page'));
+        $('.nav-link').removeClass('active');
+        $nav.addClass('active');
+      });
+    </script>
+  </body>
+</html>

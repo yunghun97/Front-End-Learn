@@ -2,13 +2,10 @@ body{
     background-color:lightsteelblue;
 }
 .loginMenu{
-    padding: 100px;
+    padding: 20% 0% 0% 50% ;
 }
 .loginMenu > .inLine{
     display: block;
-}
-h2{
-    text-align: center;
 }
 .btn1{
     height: 30px;

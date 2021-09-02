@@ -1,0 +1,33 @@
+<div class="food-body">
+  <div class="btn-area text-center">
+    <button id="addBtn">랜덤 선택</button>
+  </div>
+  <div class="msg-area">
+    오늘의 메뉴 :
+    <span id="foodName"> <!-- 선택된 음식의 이름이 보이는 부분입니다. --></span>
+  </div>
+  <div class="img-view">
+    <!-- 선택한 이미지가 보이는 부분입니다.-->
+    <img width="200" height="150" />
+  </div>
+  <div class="img-thumb">
+    <!-- images 배열 밑의 4개의 이미지가 보이는 영역입니다.(썸네일 영역)  -->
+  </div>
+</div>
+<script>
+  var $imgThumb = $('.img-thumb');
+  // foods 배열의 크기만큼 자동 반복돌면서 각 요소들을 반환
+  $.each(foods, (index, food) =>
+    $imgThumb.append(
+      `<img src="./images/${food.ename}.jpg" data-index="${index}">`
+    )
+  );
+  // 처음 로딩시 케이크 이미지 적용
+  choiceImg(0);
+
+  // 랜덤 선택 버튼 클릭 시 이벤트 처리
+  $('#addBtn').click(() => choiceImg(parseInt(Math.random() * 4)));
+
+  // 하단 썸네일 이미지 클릭 시 이벤트 처리
+  $('.img-thumb > img').click((e) => choiceImg($(e.target).data('index')));
+</script>
