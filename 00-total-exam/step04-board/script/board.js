@@ -9,20 +9,20 @@ function getUser() {
                 <th>아이디</th>
                 <th>이름</th>
                 <th>전화번호</th>
-                <th>웹사이트</th>
+                <th>회사명</th>
             </tr>
         </thead>
+        </tbody>
       `;
       $(res).each((index, item) => {
         dataHtml += `
-          <tbody>
+          
             <tr>
                 <td>${item.id}</td>
                 <td><a onclick="getUserPost('${item.id}')">${item.name}</a></td>
                 <td>${item.phone}</td>
-                <td>${item.website}</td>
+                <td>${item.company.name}</td>
             </tr>
-          </tbody>
         `;
       });
       $('#boardTbl').html(dataHtml);
@@ -66,6 +66,7 @@ function getPostComment(postId) {
   $.getJSON({
     url: `https://jsonplaceholder.typicode.com/posts/${postId}/comments`,
     success: (res) => {
+      console.dir(res);
       let dataHtml = '';
       $(res).each((index, item) => {
         dataHtml += `

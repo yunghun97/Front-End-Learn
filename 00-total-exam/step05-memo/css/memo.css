@@ -27,7 +27,7 @@
   left: 10px;
   border: 1px solid #cde;
   overflow: hidden;
-  transition: 0.5s height;
+  transition: 0.3s height;
 }
 
 .memo-note:active {

@@ -15,7 +15,7 @@ function imgChange() {
     return;
   }
 
-  lottoArr.splice(ind, 1);
+  lottoArr.splice(ind, 1);  // ind 부터 배열요소 1개를 삭제하겠다.
 
   num = 30;
   loc++;

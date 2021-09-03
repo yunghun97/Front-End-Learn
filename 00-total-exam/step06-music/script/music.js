@@ -63,16 +63,16 @@ function setEvent() {
   $('#backward').click(() => (audio.currentTime -= 10));
 
   // 음소거 이벤트 처리
-  $('#mute').click(() => {
+  $('#mute').click((e) => {
     audio.muted = !audio.muted;
-    $(this)
+    $(e.target)
       .children('span')
       .toggleClass('bi-volume-up')
       .toggleClass('bi-volume-mute');
   });
 
   // 볼륨 이벤트 처리
-  $('#volumeAudio').change(() => (audio.volume = this.value));
+  $('#volumeAudio').change((e) => (audio.volume = e.target.value));
 
   audio.addEventListener('timeupdate', () => {
     let currentTime = parseInt(audio.currentTime);
