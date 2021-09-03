@@ -1,0 +1,13 @@
+#map{
+    z-index: 0;
+    width:100%;
+    height:700px;
+    margin-top: 50px;
+}
+.btn-group{
+    margin-left: 35%;
+}
+.houseBtn{
+    margin-top: 20px;
+    margin-right: 20px;
+}

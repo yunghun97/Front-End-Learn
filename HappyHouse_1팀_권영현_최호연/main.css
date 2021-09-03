@@ -1,0 +1,48 @@
+.navbar-brand{
+    margin-left: 50px;
+}
+.navbar>ul>.menuTitle>ul{
+    width: 270px;
+    z-index: 1;
+    height: 0px;
+    position: absolute;
+    background: linear-gradient(to right, rgb(139, 217, 231), rgb(86, 129, 250));
+    opacity:0.7;
+}
+.navbar>ul>.menuTitle:hover>ul>li{
+    display: block;
+}
+.navbar>ul>.menuTitle:hover>ul{
+    height: 600px;
+    transition-duration : 0.7s;
+}
+
+.navbar>ul>.menuTitle>ul>li{
+    display: none;
+    padding: 30px;
+    margin-top: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.navbar>ul>li>ul>li:hover{
+    background-color: black;
+    color: white;
+}
+#houseImg{
+    width: 100%;
+    height: 500px;
+    opacity:0.7;
+    z-index: 0;
+}
+.footerUl {
+    list-style-type:none;
+}
+.main-container{
+    margin-top: 100px;
+}
+#footer{
+    margin-top: 70px;
+    background-color: lightgray;
+    opacity: 0.7;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      https://getbootstrap.kr/docs/5.1/components/navbar/ 
+      참고해서 사이트 만들기 
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./house/house.css" />
+    <link rel="stylesheet" href="./support/support.css" />
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>예제 연습</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html">대시보드</a>
+        <ul class="navbar-nav">
+          <li class="nav-item menuTitle"><a class="nav-link">주택 정보</a>
+            <ul >
+              <li href="" class = "nav-link" data-page="house/house.html">주택 실거래가 조회</li>
+              <li><a href="#" class = ""></a>주택 관련 뉴스</li>
+              <li><a href="#" class = ""></a>주택 관련 정보</li>
+            </ul>
+          </li>
+          <li class="nav-item menuTitle"><a class="nav-link" data-page="support/support.html" href="#2">고객 지원</a>
+            <ul>
+                <li><a href="#" class = ""></a>대출 이자 계산기</li>
+                <li><a href="#" class = ""></a>안심 병원 조회</li>
+                <li><a href="#" class = ""></a>CCTV 설치 현황</li>
+                <li><a href="#" class = ""></a>코로나 선별 진료소 조회</li>
+            </ul>
+          </li>
+          <li class="nav-item menuTitle"><a class="nav-link" data-page="support/support.html" href="#2">Q&A</a>
+            <ul>
+              <li><a href="#" class = ""></a>자주 묻는 질문</li>
+              <li><a href="#" class = ""></a>Q&A 작성</li>              
+            </ul>
+          </li>
+          <li class="nav-item menuTitle"><a class="nav-link" data-page="myPage/myPage.html" href="#3">마이 페이지</a>
+            <ul>
+              <li><a href="#" class = "nav-link"></a>비밀번호 변경</li>
+              <li><a href="#" class = ""></a>관심 지역 설정</li>              
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link"  data-page="login/login.html" href="#4">로그인</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  data-page="signup/signup.html" href="#5">회원가입</a>
+          </li>
+        </ul>
+    </nav>
+    
+    <div id="pageBody">
+      <div><img src="./img/HappyHouse사진.jpg" alt="" id="houseImg"></div>
+      <!-- ================ -->
+      <section class="main-container">
+        <div class="container">
+          <div class="row">
+            <!-- main start -->
+            <!-- ================ -->
+            <div class="main col-12">
+              <div class="separator-2"></div>
+              <!-- ======= 부가 화면 서비스   ========= -->
+               <div class="row grid-space-10">
+                <div class='col-xxl-4'>
+                  <img src="./img/news사진.jpg" id="newsImg">
+                </div>
+                      <div class="col-lg-4">
+                        <h3 class="title">주택 관련 기사</h3>
+                  <div class="separator-2"></div>
+                      <ul class="nav flex-column list-style-icons">
+                         
+                            <li class="nav-item"><a class="nav-link " href="https://m.hani.co.kr/arti/society/media/958793.html">'주택공급 부족론' 논리적 반박...</a></li>
+                            <li class="nav-item"><a class="nav-link " href="news.do?arti_id=4" title="사회주택 관련 인지도·접근성 높일 것">사회주택 관련 인지도·접근성 높일 것</a></li>
+                            <li class="nav-item"><a class="nav-link " href="news.do?arti_id=5" title="인천 동암 서울 용두 '도심공공주택 철회를'">인천 동암 서울 용두 '도심공공주택 철회를'</a></li>
+                            <li class="nav-item"><a class="nav-link " href="news.do?arti_id=33" title="청년주택 문제, 과연 청년 세대만의 일일까?">청년주택 문제, 과연 청년 세대만의 일일까?</a></li>
+                    </ul>
+                  <div class="separator-2"></div>
+                      </div>
+                <div class="col-lg-4">
+                       <h3 class="title">오늘의 뉴스</h3>
+                       <div class="separator-2"></div>
+                    <ul>
+                            <li><a href="https://www.mk.co.kr/news/society/view/2021/09/853364/" class="small margin-clear" title="유통기한 지난 백신 접종 잇따라…당국 '접종 전 꼭 확인해야">유통기한 지난 백신 접종 잇따라…당국 '접종 전 꼭 확인해야'</a></li>
+                            <li><a href="news.do?arti_id=46" class="small margin-clear" title="문 대통령, 국회의장단·상임위원장단과 오찬 간담회">문 대통령, 국회의장단·상임위원장단과 오찬 간담회</a></li>
+                            <li><a href="news.do?arti_id=45" class="small margin-clear" title="송영길 '고발사주, 누가봐도 100% 尹 지시…국기문란 게이트'">송영길 '고발사주, 누가봐도 100% 尹 지시…국기문란 게이트'</a></li>
+                            <li><a href="news.do?arti_id=44" class="small margin-clear" title="자영업자, 4차 대유행 지속 시 '1년 내 폐업 예상' 91.4%">자영업자, 4차 대유행 지속 시 '1년 내 폐업 예상' 91.4%</a></li>
+                            <li><a href="https://www.hankyung.com/finance/article/2021090310196" class="small margin-clear" title="코스피, 외인 사자에 3200선 회복…애플카 덕에 LG전자 10%↑">코스피, 외인 사자에 3200선 회복…애플카 덕에 LG전자 10%↑</a></li>
+                    </ul>
+                </div>    
+             </div>
+              <!-- =======상품 정보  종료  반복 종료  ========= -->
+              <!-- pagination start -->
+              <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">        
+                </ul>
+              </nav>
+              <!-- pagination end -->
+            </div>
+            <!-- main end -->
+          </div>
+        </div>
+      </section>
+      <!-- main-container end -->
+        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./house/house.js"></script>
+    <script src="./support/support.js"></script>
+
+    <script>
+      $('.nav-link').click((e) => {
+        $nav = $(e.target);
+        $('#pageBody').load($nav.data('page'));
+        $('.nav-link').removeClass('active');
+        $nav.addClass('active');
+      });
+    </script>
+    
+  </body>
+  <footer id="footer" class="clearfix ">
+    <!-- .footer start -->
+    <div class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="row">
+            <div class="col-md-1">
+              <div class="footer-content">
+                <img alt="" src="images/logo.png"  width="150">
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="footer-content">
+                <h2 class="title">Find Us</h2>
+                <div class="separator-2"></div>
+                <ul class="list-icons footerUl">
+                  <li list-style-type:none;><i class="fa fa-map-marker pr-2 text-default footerLi"></i> (SSAFY) 대전광역시 유성구 동서대로 대전 캠퍼스(삼성화재 유성연수원)</li>
+                  <li><i class="fa fa-phone pr-2 text-default footerLi" ></i> 042-820-7385</li>
+                  <li><a href="#"><i class="fa fa-envelope-o pr-2 footerLi"></i> admin@ssafy.com</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- .footer end -->
+
+    <!-- .subfooter start -->
+    <div class="subfooter">
+      <div class="container">
+        <div class="subfooter-inner">
+          <div class="row">
+            <div class="col-md-12">
+              <p class="text-center">Copyright by 권영현, 최호연. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- .subfooter end -->
+  </footer>
+</html>

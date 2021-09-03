@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>대출이자 계산기</title>
+</head>
+<body>
+    <script src="calculator.js"></script>
+    <form name="loandata">
+        <table>
+          <tr><td colspan="3"><b>대출 금액 및 이자율 입력</b></td></tr>
+          <tr>
+            <td>1)</td>
+            <td>대출 금액입력</td>            
+            <td>
+              <label for="principal" class="sr-only">대출금액</label>
+              <input type="number" id="principal" class="form-control" placeholder="대출 금액입력(원)" required autofocus onchange="calculate();">
+            </td>
+          </tr>
+          <tr>
+            <td>2)</td>
+            <td>이자율(%)</td>
+            <td>
+              <label for="interest" class="sr-only">이자율</label>
+              <input type="number" id="interest" class="form-control" placeholder="이자율(%)" required autofocus onchange="calculate();">
+            </td>
+          </tr>
+          <tr>
+            <td>3)</td>
+            <td>대출기간(년)</td>
+            <td>
+              <label for="years" class="sr-only">대출기간</label>
+              <input type="number" id="years" class="form-control" placeholder="대출기간(년)" required autofocus onchange="calculate();">
+            </td>
+          </tr>
+          <tr><td colspan="3">
+            <input type="button" value="계산" onclick="calculate();"><input type="button" value="다시입력" onclick="reset();">
+          </td></tr>
+          <tr><td colspan="3">
+            <b>상환내역</b>
+          </td></tr>
+          <tr>
+            <td>4)</td>
+            <td>월불입금</td>
+            <td>
+              <input type="text" name="payment" size="12"> 원
+            </td>
+          </tr>
+          <tr>
+            <td>5)</td>
+            <td>원금 및 이자합계</td>
+            <td><input type="text" name="total" size="12"> 원</td>
+          </tr>
+          <tr>
+            <td>6)</td>
+            <td>이자금액</td>
+            <td><input type="text" name="totalinterest" size="12"> 원</td>
+          </tr>
+        </table>
+    </form>
+</body>
+</html>
