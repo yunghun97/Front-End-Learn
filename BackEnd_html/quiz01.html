@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        h3{
+            font-weight: normal;
+        }
+    </style>
+<body>
+    <form action="/root/quiz01" method = "get">
+    <h1>입사지원</h1>
+    <br>
+    <h3>아래 항목을 입력해 주세요</h3>
+    <h2>개인 정보 :</h2>
+    <label for="">이름</label> <input type="text" name="name" id=""><br>
+    <label for="">핸드폰</label> <input type="text" name="phone_number" id=""><br>
+    <label for="">이메일주소</label> <input type="text" name="email_address" id=""><br>
+    <h2>학과를 선택해 주세요 :</h2>
+    <input type="radio" class = "radio1" name="department" id="computer" value="컴퓨터공학"><label for="computer">컴퓨터공학</label>
+    <input type="radio" class = "radio1" name="department" id="electric" value="전자과"><label for="electric">전자과</label>
+    <input type="radio" class = "radio1" name="department" id="math" value="수학과"><label for="math">수학과</label>
+    <input type="radio" class = "radio1" name="department" id="industry" value="산업공학과"><label for="industry">산업공학과</label>
+
+    <h2>이수 과목은 무엇입니까?</h2>
+    <input type="checkbox" name="subject" value ="EJB" id="EJB"><label for="EJB">EJB</label>
+    <input type="checkbox" name="subject" value = "Spring" id="Spring"><label for="Spring">Spring</label>
+    <input type="checkbox" name="subject" value = "UML" id="UML"><label for="UML">UML</label><br><br>
+    <input type="checkbox" name="subject" value = "JDBC" id="JDBC"><label for="JDBC">JDBC</label>
+    <input type="checkbox" name="subject" value = "Servlet" id="Servlet"><label for="Servlet">Servlet</label>
+    <input type="checkbox" name="subject" value = "JSP" id="JSP"><label for="JSP">JSP</label><br>
+    <br>
+    <label for="">정보 발송 방법</label><select name="infoSend" id="selBox">
+        <option value="not">선택하세요</option>
+        <option value="email">이메일</option>
+        <option value="phone">핸드폰</option>
+    </select>
+    <br>
+    <input type="checkbox" name="admit" id="admit"><label for="admit">개인정보 이용 약관에 동의합니다.</label><br><br>
+    <input type="submit" value="전송">
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #desc{
+            width: 100%;
+            height: 60px;
+            padding-top: 0px;
+        }
+        #fdset1 > label{
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method = "post">
+        <fieldset id ="fdset1">
+            <legend>도서 등록</legend>
+            <input type="hidden" name="hidden" value = "hidden">
+            <label for="isbn">도서번호</label>  <input type="text" name="isbn" id="isbn"><br>
+            <label for="title">도서명</label>   <input type="text" name="title" id="title"><br>
+            <label for="author">저자</label>    <input type="text" name="author" id="author"><br>
+            <label for="price">가격</label>     <input type="text" name="price" id="price"><br>
+            <label for="desc">설명</label><br>  <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+            <input type="button" value="등록" id="registerButton"> <input type="button" value="취소" id="cancelButton">
+        </fieldset>
+    </form>
+</body>
+</html>

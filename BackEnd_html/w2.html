@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #desc{
+            width: 100%;
+            height: 60px;
+            padding-top: 0px;
+        }
+        #fdset1 > label{
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function() {
+    		$("#registerButton").click(function(){
+    			if(!$("#isbn").val()){
+    				alert("도서번호 입력!");
+    				return;
+    			}else if(!$("#title").val()){
+    				alert("도서제목 입력!");
+    				return;
+    			}else if(!$("#author").val()){
+    				alert("저자를 입력!");
+    				return;
+    			}else if(!$("#price").val()){
+    				alert("가격 입력!");
+    				return;
+    			}else if(isNaN(document.getElementById("price").value)){
+    				alert("가격에 숫자를 입력하세요!");
+    				return;
+    			}else if(!$("#desc").val()){
+    				alert("설명 입력!");
+    				return;
+    			}else{
+    				$("#form1").attr("action", "/workshop_back_2/main").submit();
+    			}
+    			
+    			});
+        	document.getElementById("cancelButton").addEventListener("click", function(){
+                let elemetns = document.getElementsByClassName("text1");
+                for(let i=0; i<elemetns.length; i++){
+                    elemetns[i].value="";
+                }
+            });
+            
+    	});
+    </script>
+</head>
+<body>
+    <form id= "form1" action="" method ="post">
+        <fieldset id ="fdset1">
+            <legend>도서 등록</legend>         
+            <input type="hidden" name="action" value = "regist">         
+            <label for="isbn">도서번호</label>  <input type="text" class ="text1" name="isbn" id="isbn"><br>
+            <label for="title">도서명</label>   <input type="text" class ="text1" name="title" id="title"><br>
+            <label for="author">저자</label>    <input type="text" class ="text1" name="author" id="author"><br>
+            <label for="price">가격</label>     <input type="text" class ="text1" name="price" id="price"><br>
+            <label for="desc">설명</label><br>  <textarea class ="text1" name="desc" id="desc" cols="30" rows="10"></textarea>
+            <input type="button" value="등록" id="registerButton"> <input type="button" value="취소" id="cancelButton">
+        </fieldset>
+    </form>
+</body>
+</html>
